@@ -4,5 +4,5 @@ newspaper3k
 nltk
 textblob
 validators
-lxml_html_clean
 requests
+lxml_html_clean
