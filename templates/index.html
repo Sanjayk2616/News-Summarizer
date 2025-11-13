@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Summarizer</title>
+</head>
+<body>
+    <h1>AI News Summarizer</h1>
+
+    <form method="POST">
+        <input type="url" name="url" placeholder="Enter article URL" required>
+        <button type="submit">Summarize</button>
+    </form>
+
+    {% if title %}
+        <h2>{{ title }}</h2>
+        <p><strong>Authors:</strong> {{ authors }}</p>
+        <p><strong>Publish Date:</strong> {{ publish_date }}</p>
+        <p><strong>Summary:</strong> {{ summary }}</p>
+        <p><strong>Sentiment:</strong> {{ sentiment }}</p>
+        {% if top_image %}
+        <img src="{{ top_image }}" style="max-width:300px;">
+        {% endif %}
+    {% endif %}
+</body>
+</html>
